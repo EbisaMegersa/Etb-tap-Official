@@ -88,9 +88,9 @@ body {
     color: white;
     padding: 20px;
     border-radius: 20px;
-    text-align: left;
+    text-align: center;
     display: none;
-    max-width: 100%;
+    max-width: 80%;
     font-size: 20px;
 }
 

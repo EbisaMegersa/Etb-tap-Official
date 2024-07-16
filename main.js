@@ -15,13 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-document.getElementById('main-img').addEventListener('click', () => {
+document.getElementById('main-img').addEventListener('click', (event) => {
     const mainImg = document.getElementById('main-img');
-    mainImg.classList.add('animated');
-
-    setTimeout(() => {
-        mainImg.classList.remove('animated');
-    }, 200);
+    createFloatingText(event.clientX, event.clientY, '+0.003 ETB');
 
     balance += incrementValue;
     updateDisplay();
@@ -43,6 +39,29 @@ document.getElementById('boost').addEventListener('click', () => {
 document.getElementById('frens').addEventListener('click', () => {
     showPopup("Referall link ለማግኘት ይሄንን step ይከታተሉ!\n1 ቦቱን /start ይበሉት\n2 ቻናላችንን ይቀላቀሉ \n3 የሚመጣዉን ጥያቄ በመመለስ ወደ ቦቱ ዉስጥ ይግቡ\n4 ከዛ ጓደኞችዎን ይጋብዙ ሚለውን Button በመጫን የርሶን መጋበዣ link ማግኘት ትችላላችሁ!");
 });
+
+function createFloatingText(x, y, text) {
+    const floatingText = document.createElement('div');
+    floatingText.innerText = text;
+    floatingText.style.position = 'absolute';
+    floatingText.style.left = `${x}px`;
+    floatingText.style.top = `${y}px`;
+    floatingText.style.color = '#ffffff';
+    floatingText.style.fontSize = '24px';
+    floatingText.style.fontWeight = 'bold';
+    floatingText.style.zIndex = '1000';
+    floatingText.style.transition = 'all 1s ease-out';
+    document.body.appendChild(floatingText);
+
+    setTimeout(() => {
+        floatingText.style.transform = 'translateY(-50px)';
+        floatingText.style.opacity = '0';
+    }, 50);
+
+    setTimeout(() => {
+        floatingText.remove();
+    }, 1050);
+}
 
 function showPopup(message) {
     const popup = document.getElementById('popup');

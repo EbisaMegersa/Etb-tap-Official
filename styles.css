@@ -31,7 +31,7 @@ body {
 }
 
 #main-img.tapped {
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
 .nav-bar {
     display: flex;

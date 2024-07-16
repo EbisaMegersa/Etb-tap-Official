@@ -35,23 +35,6 @@ body {
     transform: perspective(100px) rotateX(10deg) rotateY(10deg);
 }
 
-#taps-remaining {
-    margin-top: 60px;
-    font-size: 20px;
-    color: #ffcc00;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px #ffcc00;
-}
-
-#etb-remaining {
-    position: fixed;
-    bottom: 60px;
-    font-size: 20px;
-    color: #ffcc00;
-}
-
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -74,7 +57,7 @@ body {
     bottom: 0;
     background-color: rgba(30, 30, 47, 0.9);
     padding: 15px 0;
-    border-radius: 0px;
+    border-radius: 15px;
 }
 
 .nav-item {
@@ -93,7 +76,7 @@ body {
     border: none;
     color: #ffcc00;
     font-size: 22px;
-    cursor: none;
+    cursor: pointer;
 }
 
 #popup {

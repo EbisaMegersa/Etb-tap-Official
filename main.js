@@ -1,5 +1,5 @@
-let balance = 0.0; // Use a float for ETB balance
-const incrementValue = 0.003; // Amount per tap
+let balance = 0.0;
+const incrementValue = 0.003;
 
 document.addEventListener('DOMContentLoaded', () => {
     const user = window.Telegram.WebApp.initDataUnsafe.user;
@@ -17,6 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById('main-img').addEventListener('click', (event) => {
     const mainImg = document.getElementById('main-img');
+    
+    // Add the tapped effect
+    mainImg.classList.add('tapped');
+    
+    setTimeout(() => {
+        mainImg.classList.remove('tapped');
+    }, 300); // Match this duration with the CSS transition time
+
     createFloatingText(event.clientX, event.clientY, '+0.003 ETB');
 
     balance += incrementValue;

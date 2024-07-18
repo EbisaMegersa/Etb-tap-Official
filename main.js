@@ -21,24 +21,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-document.getElementById('main-img').addEventListener('click', (event) => {
+document.getElementById('main-img').addEventListener('touchstart', (event) => {
     const mainImg = document.getElementById('main-img');
-    
-    // Add the tapped effect
-    mainImg.classList.add('tapped');
-    
-    setTimeout(() => {
-        mainImg.classList.remove('tapped');
-    }, 300); // Match this duration with the CSS transition time
 
-    createFloatingText(event.clientX, event.clientY, '+0.003 ETB');
+    // Prevent the default behavior to ensure the app handles the touch event correctly
+    event.preventDefault();
 
-    balance += incrementValue;
-    updateDisplay();
+    // Loop through each touch point
+    for (let i = 0; i < event.touches.length; i++) {
+        const touch = event.touches[i];
 
-    const user = window.Telegram.WebApp.initDataUnsafe.user;
-    if (user) {
-        localStorage.setItem(`balance_${user.id}`, balance.toFixed(4));
+        // Add the tapped effect
+        mainImg.classList.add('tapped');
+        setTimeout(() => {
+            mainImg.classList.remove('tapped');
+        }, 300); // Match this duration with the CSS transition time
+
+        createFloatingText(touch.clientX, touch.clientY, '+0.003 ETB');
+
+        balance += incrementValue;
+        updateDisplay();
+
+        const user = window.Telegram.WebApp.initDataUnsafe.user;
+        if (user) {
+            localStorage.setItem(`balance_${user.id}`, balance.toFixed(4));
+        }
     }
 });
 
@@ -54,6 +61,10 @@ document.getElementById('frens').addEventListener('click', () => {
     showPopup("Referall link ለማግኘት ይሄንን step ይከታተሉ!\n1 ቦቱን /start ይበሉት\n2 ቻናላችንን ይቀላቀሉ \n3 የሚመጣዉን ጥያቄ በመመለስ ወደ ቦቱ ዉስጥ ይግቡ\n4 ከዛ ጓደኞችዎን ይጋብዙ ሚለውን Button በመጫን የርሶን መጋበዣ link ማግኘት ትችላላችሁ!");
 });
 
+document.getElementById('task').addEventListener('click', () => {
+    showPopup("በቅርብ ቀን!\nComing Soon!");
+});
+
 function createFloatingText(x, y, text) {
     const floatingText = document.createElement('div');
     floatingText.innerText = text;
@@ -64,11 +75,11 @@ function createFloatingText(x, y, text) {
     floatingText.style.fontSize = '24px';
     floatingText.style.fontWeight = 'bold';
     floatingText.style.zIndex = '1000';
-    floatingText.style.transition = 'all 1s ease-out';
+    floatingText.style.transition = 'all 0.5s ease-out';
     document.body.appendChild(floatingText);
 
     setTimeout(() => {
-        floatingText.style.transform = 'translateY(-50px)';
+        floatingText.style.transform = 'translateY(-70px)';
         floatingText.style.opacity = '0';
     }, 50);
 

@@ -9,6 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add event listener to the Back to Main button
     document.getElementById('back-to-main').addEventListener('click', () => {
-        window.location.href = 'index.html';
+        window.location.href = 'main.html';
     });
 });

@@ -1,6 +1,6 @@
 let balance = 0.0;
 const incrementValue = 0.003;
-const adminId = 'YOUR_ADMIN_ID'; // Replace 'YOUR_ADMIN_ID' with the actual admin's Telegram ID
+const adminId = '6758991323'; // Replace 'YOUR_ADMIN_ID' with the actual admin's Telegram ID
 
 document.addEventListener('DOMContentLoaded', () => {
     const user = window.Telegram.WebApp.initDataUnsafe.user;

@@ -1,118 +1,53 @@
 body {
     margin: 0;
-    background-color: #5701C2;
+    background: linear-gradient(#2EB1C6, #712EDF);
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
+    margin-top: 50px;
     color: #f8f8f8;
     font-family: 'Roboto', sans-serif;
     height: 100vh;
     position: relative;
 }
-
-#balance {
-    position: absolute;
-    top: 20px;
-    right: 10px; /* Positioning to the right */
-    font-size: 20px;
-    z-index: 10;
-    color: #ffcc00;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px 7px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ffcc00;
+progress{
+  margin-top: 350px;
+  padding: 1px 100px;
 }
-
-#username {
-    position: absolute;
-    top: 20px;
-    left: 10px; /* Positioning to the left */
-    font-size: 20px;
-    z-index: 10;
-    color: #ffcc00;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px 7px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ffcc00;
+.maintenance{
+  font-family: serif;
 }
-
-#main-img {
-    max-width: 60%;
-    height: auto;
-    cursor: none;
-    transition: transform 0.15s;
-    margin-top: 220px; /* Adjust this value as needed */
+.ppp{
+  font-family: monospace;
 }
-
-#main-img.tapped {
-    transform: scale(1.04);
+marquee{
+  margin-top: 150px;
+  font-size: 20px;
 }
-
-.nav-bar {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    position: fixed;
-    bottom: 15px;
-    background-color: rgba(30, 30, 47, 0.9);
-    padding: 15px 0;
-    border-radius: 15px;
-    box-shadow: 0 0 20px #ffcc00;
+.h1text{
+  animation-name: new;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  background: #712EDF;
+  opacity: 75%;
+  border-radius: 10px;
+  padding: 10px 50px;
 }
-
-.nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.nav-emoji {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-    font-size: 24px;
-}
-
-.nav-icon {
-    width: 24px; /* Adjust the size as needed */
-    height: 24px; /* Adjust the size as needed */
-    border-radius: 50%; /* Optional: to make the image circular */
-}
-
-.nav-photo {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-bottom: 1px;
-    border-radius: 15px;
-}
-
-.nav-bar button {
-    background: none;
-    border: none;
-    color: #ffcc00;
-    font-size: 22px;
-    cursor: none;
-    border-radius: 15px;
-}
-
-#popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: mediumpurple;
-    color: white;
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-    display: none;
-    max-width: 80%;
-    font-size: 20px;
-    box-shadow: 0 0 10px #ffcc00;
-}
-
-.hidden {
-    display: none;
+@keyframes new{
+  0%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(20px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  75%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
 }

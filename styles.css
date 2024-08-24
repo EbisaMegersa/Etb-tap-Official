@@ -9,10 +9,9 @@ body {
     color: #f8f8f8;
     font-family: 'Roboto', sans-serif;
     height: 100vh;
-    position: relative;
 }
 progress{
-  margin-top: 350px;
+  margin-top: 300px;
   padding: 1px 100px;
 }
 .maintenance{
@@ -32,7 +31,7 @@ marquee{
   background: #712EDF;
   opacity: 75%;
   border-radius: 10px;
-  padding: 10px 50px;
+  padding: 10px 25px;
 }
 @keyframes new{
   0%{

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (username.length > 10) {
             username = username.substring(0, 10) + '...';
         }
-        document.getElementById('username').innerText = username;
+        document.getElementById('username-value').innerText = username;
 
         const storedBalance = localStorage.getItem(`balance_${user.id}`);
         if (storedBalance !== null) {
@@ -35,13 +35,13 @@ document.getElementById('main-img').addEventListener('touchstart', (event) => {
         mainImg.classList.add('tapped');
         setTimeout(() => {
             mainImg.classList.remove('tapped');
-        }, 150);
+        }, 300); // Match this duration with the CSS transition time
 
-        // Increment the balance
+        createFloatingText(touch.clientX, touch.clientY, '+0.01 ETB');
+
         balance += incrementValue;
         updateDisplay();
 
-        // Store the updated balance
         const user = window.Telegram.WebApp.initDataUnsafe.user;
         if (user) {
             localStorage.setItem(`balance_${user.id}`, balance.toFixed(4));
@@ -49,29 +49,55 @@ document.getElementById('main-img').addEventListener('touchstart', (event) => {
     }
 });
 
-function updateDisplay() {
-    document.getElementById('balance-value').innerText = balance.toFixed(4);
-}
+document.getElementById('tap').addEventListener('click', () => {
+    window.location.href = 'main.html';
+});
 
-// Handling button clicks
 document.getElementById('boost').addEventListener('click', () => {
-    showPopup('በቅርቡ Boost system ሰርተን እንጨርሳለን, እስከዛ ከኛ ጋር ይሁኑ!');
+    showPopup("Boost system is Coming Soon!");
 });
 
 document.getElementById('frens').addEventListener('click', () => {
-    showPopup('To get referral link 1. Open the bot 2. Click referral link button 3. Then you get your referral link');
+    showPopup("Referall link System is Coming!");
 });
 
 document.getElementById('withdraw').addEventListener('click', () => {
-    showPopup('Withdraw feature coming soon!'); // Placeholder message for withdraw button
+    showPopup("Withdrawal System is a few days left!");
 });
+
+function createFloatingText(x, y, text) {
+    const floatingText = document.createElement('div');
+    floatingText.innerText = text;
+    floatingText.style.position = 'absolute';
+    floatingText.style.left = `${x}px`;
+    floatingText.style.top = `${y}px`;
+    floatingText.style.color = '#ffffff';
+    floatingText.style.fontSize = '24px';
+    floatingText.style.fontWeight = 'bold';
+    floatingText.style.zIndex = '1000';
+    floatingText.style.transition = 'all 0.5s ease-out';
+    document.body.appendChild(floatingText);
+
+    setTimeout(() => {
+        floatingText.style.transform = 'translateY(-70px)';
+        floatingText.style.opacity = '0';
+    }, 50);
+
+    setTimeout(() => {
+        floatingText.remove();
+    }, 1050);
+}
 
 function showPopup(message) {
     const popup = document.getElementById('popup');
     popup.innerText = message;
     popup.classList.remove('hidden');
-    
+    popup.style.display = 'block';
     setTimeout(() => {
-        popup.classList.add('hidden');
-    }, 3000); // Hide the popup after 3 seconds
+        popup.style.display = 'none';
+    }, 5000);
+}
+
+function updateDisplay() {
+    document.getElementById('balance-value').innerText = balance.toFixed(4);
 }

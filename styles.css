@@ -1,53 +1,215 @@
 body {
-    margin: 0;
-    background: linear-gradient(#2EB1C6, #712EDF);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    margin-top: 50px;
-    color: #f8f8f8;
-    font-family: 'Roboto', sans-serif;
-    height: 100vh;
+  margin: 0;
+  background: linear-gradient(to top, #2E3BCA, #B437DB);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f8f8f8;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  position: relative;
 }
-progress{
-  margin-top: 300px;
-  padding: 1px 100px;
-}
-.maintenance{
-  font-family: serif;
-}
-.ppp{
+
+.backg {
+  background-color: rgba(30, 30, 47, 0.9);
+  width: 100%;
+  padding: 23px 0px;
   font-family: monospace;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 20px #ffcc00;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
-marquee{
-  margin-top: 150px;
-  font-size: 20px;
+
+#balance {
+  margin-right: 20px;
 }
-.h1text{
-  animation-name: new;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  background: #712EDF;
-  opacity: 75%;
+
+.profile {
+  gap: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  /* Adjust this value if needed */
+}
+
+#profile-picture {
+  width: 25px;
+  /* Adjust size as needed */
+  height: 25px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+#username {
+  color: #f8f8f8;
+}
+
+.join-com {
+  background-color: darkblue;
+  position: absolute;
+  padding: 0px 10px;
   border-radius: 10px;
-  font-size: 20px;
-  padding: 10px 20px;
+  font-family: sans-serif;
+  font-size: 8px;
+  top: 80px;
+  right: 13px;
+  animation-name: join;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
-@keyframes new{
-  0%{
+
+.join-com a {
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes join {
+  0% {
+    transform: translateX(0px)
+  }
+
+  50% {
+    transform: translateX(7px)
+  }
+
+  100% {
+    transform: translateX(0px)
+  }
+}
+
+#main-img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 50%;
+  cursor: none;
+  transition: transform 0.15s;
+  margin-top: 100px;
+  /* Adjust this value as needed */
+}
+
+#main-img.tapped {
+  transform: scale(1.04);
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background-color: rgba(30, 30, 47, 0.9);
+  padding: 15px 0;
+  box-shadow: 0 0 20px #ffcc00;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-emoji {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  font-size: 24px;
+}
+
+.nav-icon {
+  width: 24px;
+  /* Adjust the size as needed */
+  height: 24px;
+  /* Adjust the size as needed */
+  border-radius: 50%;
+  /* Optional: to make the image circular */
+}
+
+.nav-photo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-bottom: 1px;
+  border-radius: 15px;
+}
+
+.nav-bar button {
+  background: none;
+  border: none;
+  color: #ffcc00;
+  font-size: 22px;
+  cursor: none;
+  border-radius: 15px;
+}
+
+.new {
+  font-size: 4px;
+  position: fixed;
+  bottom: 60px;
+  right: 40px;
+}
+
+.new-h1 {
+  background: linear-gradient(#12A1EB, #FF0051);
+  padding: 1px 4px;
+  border-radius: 5px;
+  animation-name: newh;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes newh {
+  0% {
+    opacity: 0%;
+  }
+
+  50% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+#popup {
+  position: fixed;
+  bottom: 0px;
+  background: linear-gradient(#FFB91A, #58B113);
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  display: none;
+  height: 5%;
+  width: 100%;
+  font-size: 20px;
+  box-shadow: 0 0 10px #ffcc00;
+  animation-name: popup;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(70px);
+    opacity: 0%;
+
+  }
+
+  100% {
     transform: translateY(0px);
   }
-  25%{
-    transform: translateY(20px);
-  }
-  50%{
-    transform: translateY(0px);
-  }
-  75%{
-    transform: translateY(-20px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
+}
+
+.hidden {
+  display: none;
 }

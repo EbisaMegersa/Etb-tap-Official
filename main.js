@@ -1,5 +1,5 @@
-let balance = 0.0;
-const incrementValue = 0.003;
+let balance = 0;
+const incrementValue = 0.01;
 
 document.addEventListener('DOMContentLoaded', () => {
     const user = window.Telegram.WebApp.initDataUnsafe.user;
@@ -37,7 +37,7 @@ document.getElementById('main-img').addEventListener('touchstart', (event) => {
             mainImg.classList.remove('tapped');
         }, 300); // Match this duration with the CSS transition time
 
-        createFloatingText(touch.clientX, touch.clientY, '+0.003 ETB');
+        createFloatingText(touch.clientX, touch.clientY, '+0.01 ETB');
 
         balance += incrementValue;
         updateDisplay();
@@ -54,15 +54,15 @@ document.getElementById('tap').addEventListener('click', () => {
 });
 
 document.getElementById('boost').addEventListener('click', () => {
-    showPopup("በቅርብ ቀን!\nComing Soon!");
+    showPopup("Boost system is Coming Soon!");
 });
 
 document.getElementById('frens').addEventListener('click', () => {
-    showPopup("Referall link ለማግኘት ይሄንን step ይከታተሉ!\n1 ቦቱን /start ይበሉት\n2 ቻናላችንን ይቀላቀሉ \n3 የሚመጣዉን ጥያቄ በመመለስ ወደ ቦቱ ዉስጥ ይግቡ\n4 ከዛ ጓደኞችዎን ይጋብዙ ሚለውን Button በመጫን የርሶን መጋበዣ link ማግኘት ትችላላችሁ!");
+    showPopup("Referall link System is Coming!");
 });
 
-document.getElementById('task').addEventListener('click', () => {
-    showPopup("በቅርብ ቀን!\nComing Soon!");
+document.getElementById('withdraw').addEventListener('click', () => {
+    showPopup("Withdrawal System is a few days left!");
 });
 
 function createFloatingText(x, y, text) {

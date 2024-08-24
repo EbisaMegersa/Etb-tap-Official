@@ -2,7 +2,7 @@ let balance = 0;
 const incrementValue = 0.01;
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Ensure the Telegram Web App is initialized
+    // Ensure the Telegram Web App is initialized and the user is accessible
     if (typeof Telegram !== 'undefined' && Telegram.WebApp && Telegram.WebApp.initDataUnsafe) {
         const user = window.Telegram.WebApp.initDataUnsafe.user;
 
@@ -27,18 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.getElementById('main-img').addEventListener('touchstart', (event) => {
-    const mainImg = document.getElementById('main-img');
-
     event.preventDefault();
+    
+    const mainImg = document.getElementById('main-img');
+    mainImg.classList.add('tapped');
+    setTimeout(() => {
+        mainImg.classList.remove('tapped');
+    }, 300);
 
     for (let i = 0; i < event.touches.length; i++) {
         const touch = event.touches[i];
-
-        mainImg.classList.add('tapped');
-        setTimeout(() => {
-            mainImg.classList.remove('tapped');
-        }, 300);
-
         createFloatingText(touch.clientX, touch.clientY, '+0.01 ETB');
 
         balance += incrementValue;

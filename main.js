@@ -73,7 +73,7 @@ function createFloatingText(x, y, text) {
     floatingText.style.top = `${y}px`;
     floatingText.style.color = '#ffffff';
     floatingText.style.fontSize = '24px';
-    floatingText.style.fontWeight = 'bold';
+    floatingText.style.fontWeight = 'none';
     floatingText.style.zIndex = '1000';
     floatingText.style.transition = 'all 0.5s ease-out';
     document.body.appendChild(floatingText);

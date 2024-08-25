@@ -103,10 +103,10 @@ body {
   position: fixed;
   bottom: 0px;
   background-color: rgba(30, 30, 47, 0.9);
-  padding: 15px 0;
+  padding: 17px 0;
   box-shadow: 0 0 20px #ffcc00;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .nav-item {
@@ -120,16 +120,8 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 0px;
-  font-size: 24px;
-}
-
-.nav-icon {
-  width: 24px;
-  /* Adjust the size as needed */
-  height: 24px;
-  /* Adjust the size as needed */
-  border-radius: 50%;
-  /* Optional: to make the image circular */
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .nav-photo {
@@ -144,7 +136,7 @@ body {
   background: none;
   border: none;
   color: #ffcc00;
-  font-size: 22px;
+  font-size: 20px;
   cursor: none;
   border-radius: 15px;
 }
@@ -152,7 +144,7 @@ body {
 .new {
   font-size: 4px;
   position: fixed;
-  bottom: 60px;
+  bottom: 62px;
   right: 40px;
 }
 
@@ -185,23 +177,24 @@ body {
   background: linear-gradient(#FFB91A, #58B113);
   color: white;
   padding: 20px;
-  border-radius: 20px;
+  
   text-align: center;
   display: none;
-  height: 5%;
+  height: 10%;
   width: 100%;
   font-size: 20px;
   box-shadow: 0 0 10px #ffcc00;
   animation-name: popup;
   animation-duration: 2s;
   animation-iteration-count: 1;
-
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
 }
 
 @keyframes popup {
   0% {
-    transform: translateY(70px);
-    opacity: 0%;
+    transform: translateY(130px);
+    opacity: 50%;
 
   }
 

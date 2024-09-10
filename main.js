@@ -1,5 +1,5 @@
 let balance = 0;
-const incrementValue = 0.01;
+const incrementValue = 0.05;
 
 document.addEventListener('DOMContentLoaded', () => {
     // Ensure the Telegram Web App is initialized and the user is accessible

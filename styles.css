@@ -107,11 +107,16 @@ body {
   right: 35px;
   top: 67vh;
   z-index: 1;
-  
+  animation-name: abebaw;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 .abeba2{
   position: fixed;
   left: 48px;
+  animation-name: abebaw2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 .abeba3{
   position: fixed;
@@ -119,6 +124,42 @@ body {
   left: 55px;
   z-index: 1;
   filter: blur(1px);
+  animation-name: abebaw3;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes abebaw{
+  0%{
+    transform: rotate(45deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(90deg);
+  }
+}
+@keyframes abebaw2{
+  0%{
+    transform: rotate(45deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(90deg);
+  }
+}
+@keyframes abebaw3{
+  0%{
+    transform: rotate(45deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(90deg);
+  }
 }
 .nav-bar {
   display: flex;

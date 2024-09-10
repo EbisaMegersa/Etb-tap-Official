@@ -37,7 +37,7 @@ document.getElementById('main-img').addEventListener('touchstart', (event) => {
 
     for (let i = 0; i < event.touches.length; i++) {
         const touch = event.touches[i];
-        createFloatingText(touch.clientX, touch.clientY, '+0.01 ETB');
+        createFloatingText(touch.clientX, touch.clientY, '+0.05 ETB');
 
         balance += incrementValue;
         updateDisplay();

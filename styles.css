@@ -1,13 +1,13 @@
 body {
   margin: 0;
-  background: linear-gradient(to top, #2E3BCA, #B437DB);
+  background: linear-gradient(to bottom, #FFA529, #FFC300);
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #f8f8f8;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
-  position: relative;
+  background-size: 420px;
 }
 
 .backg {
@@ -95,7 +95,31 @@ body {
 #main-img.tapped {
   transform: scale(1.04);
 }
-
+.year{
+  position: fixed;
+  bottom: 100px;
+}
+.yearpic{
+  border-radius: 10px;
+}
+.abeba{
+  position: fixed;
+  right: 35px;
+  top: 67vh;
+  z-index: 1;
+  
+}
+.abeba2{
+  position: fixed;
+  left: 48px;
+}
+.abeba3{
+  position: fixed;
+  bottom: 80px;
+  left: 55px;
+  z-index: 1;
+  filter: blur(1px);
+}
 .nav-bar {
   display: flex;
   justify-content: space-around;

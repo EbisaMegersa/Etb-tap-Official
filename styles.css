@@ -110,6 +110,7 @@ body {
   animation-name: abebaw;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  user-select: none;
 }
 .abeba2{
   position: fixed;
@@ -117,6 +118,7 @@ body {
   animation-name: abebaw2;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+  user-select: none;
 }
 .abeba3{
   position: fixed;
@@ -127,6 +129,7 @@ body {
   animation-name: abebaw3;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  user-select: none;
 }
 @keyframes abebaw{
   0%{

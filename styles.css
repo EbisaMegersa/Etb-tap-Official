@@ -1,17 +1,17 @@
 body {
   margin: 0;
-  background: linear-gradient(to bottom, #FFA529, #FFC300);
+  background: linear-gradient(#2FE52E, #FFF302,#FF0202);
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #f8f8f8;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
-  background-size: 420px;
+  background-size: 200px;
 }
 
 .backg {
-  background-color: rgba(30, 30, 47, 0.9);
+  background-color: darkred;
   width: 100%;
   padding: 23px 0px;
   font-family: monospace;
@@ -21,7 +21,7 @@ body {
   justify-content: space-between;
   box-shadow: 0 0 20px #ffcc00;
   border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 0px;
 }
 
 #balance {
@@ -61,14 +61,13 @@ body {
 }
 
 .join-com {
-  background-color: darkblue;
+  background-color: #FF0000;
   position: absolute;
-  padding: 0px 10px;
+  padding: 20px 8px;
   border-radius: 10px;
   font-family: sans-serif;
   font-size: 8px;
-  top: 80px;
-  right: 13px;
+  bottom: 100px;
   animation-name: join;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -77,24 +76,23 @@ body {
 .join-com a {
   text-decoration: none;
   color: white;
+  padding: 25px 80px;
 }
-
 @keyframes join {
   0% {
-    transform: translateX(0px)
+    transform: scale(0..1)
   }
-
-  50% {
-    transform: translateX(7px)
+  50%{
+    transform: scale(1.1);
   }
 
   100% {
-    transform: translateX(0px)
+    transform: scale(0.8.1)
   }
 }
 
 #main-img {
-  max-width: 75%;
+  max-width: 65%;
   height: auto;
   border-radius: 50%;
   cursor: none;
@@ -106,42 +104,17 @@ body {
 #main-img.tapped {
   transform: scale(1.04);
 }
-.year{
-  position: fixed;
-  bottom: 100px;
-}
-.yearpic{
-  border-radius: 10px;
-}
-.abeba{
-  position: fixed;
-  right: 35px;
-  top: 67vh;
-  z-index: 1;
-  
-}
-.abeba2{
-  position: fixed;
-  left: 48px;
-}
-.abeba3{
-  position: fixed;
-  bottom: 80px;
-  left: 55px;
-  z-index: 1;
-  filter: blur(1px);
-}
 .nav-bar {
   display: flex;
   justify-content: space-around;
   width: 100%;
   position: fixed;
   bottom: 0px;
-  background-color: rgba(30, 30, 47, 0.9);
+  background-color: darkred;
   padding: 17px 0;
   box-shadow: 0 0 20px #ffcc00;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 20px;
 }
 
 .nav-item {
@@ -209,10 +182,9 @@ body {
 #popup {
   position: fixed;
   bottom: 0px;
-  background: linear-gradient(#FFB91A, #58B113);
+  background: darkred;
   color: white;
   padding: 20px;
-  
   text-align: center;
   display: none;
   height: 10%;
@@ -222,17 +194,13 @@ body {
   animation-name: popup;
   animation-duration: 2s;
   animation-iteration-count: 1;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
 }
 
 @keyframes popup {
   0% {
     transform: translateY(130px);
     opacity: 50%;
-
   }
-
   100% {
     transform: translateY(0px);
   }

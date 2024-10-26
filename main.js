@@ -53,14 +53,6 @@ document.getElementById('tap').addEventListener('click', () => {
     window.location.href = 'main.html';
 });
 
-document.getElementById('boost').addEventListener('click', () => {
-    showPopup("Boost system is Coming Soon!");
-});
-
-document.getElementById('frens').addEventListener('click', () => {
-    showPopup("Referral link System is Coming!");
-});
-
 document.getElementById('withdraw').addEventListener('click', () => {
     showPopup("Withdrawal System is a few days left!");
 });

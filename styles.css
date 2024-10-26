@@ -33,16 +33,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0px;
   /* Adjust this value if needed */
 }
-
+.profile_balance{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Adjust this value if needed */
+}
 #profile-picture {
-  width: 25px;
+  width: 23px;
   /* Adjust size as needed */
-  height: 25px;
-  border-radius: 50%;
+  height: 23px;
+  border-radius: 60%;
   margin-left: 15px;
+}
+#profile-balance{
+  width: 23px;
+  /* Adjust size as needed */
+  height: 23px;
+  border-radius: 60%;
+  margin-right: 15px;
 }
 
 #username {
@@ -107,18 +118,11 @@ body {
   right: 35px;
   top: 67vh;
   z-index: 1;
-  animation-name: abebaw;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  user-select: none;
+  
 }
 .abeba2{
   position: fixed;
   left: 48px;
-  animation-name: abebaw2;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  user-select: none;
 }
 .abeba3{
   position: fixed;
@@ -126,43 +130,6 @@ body {
   left: 55px;
   z-index: 1;
   filter: blur(1px);
-  animation-name: abebaw3;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  user-select: none;
-}
-@keyframes abebaw{
-  0%{
-    transform: rotate(45deg);
-  }
-  50%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(90deg);
-  }
-}
-@keyframes abebaw2{
-  0%{
-    transform: rotate(45deg);
-  }
-  50%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(90deg);
-  }
-}
-@keyframes abebaw3{
-  0%{
-    transform: rotate(45deg);
-  }
-  50%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(90deg);
-  }
 }
 .nav-bar {
   display: flex;
